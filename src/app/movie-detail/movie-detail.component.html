@@ -1,0 +1,10 @@
+<div class="card" *ngIf="movie">
+  <div class="card-header">
+    {{movie.name}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Link : {{movie.link}}</h5>
+    <p class="card-text">{{movie.desc}}</p>
+    <a href="/list" class="btn btn-primary">Go list</a>
+  </div>
+</div>

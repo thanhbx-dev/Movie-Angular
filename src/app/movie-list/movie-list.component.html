@@ -1,0 +1,27 @@
+<a class="btn btn-primary m-3" href="/add" role="button">Add</a>
+<div class="container-fluid">
+  <table class="table table-striped table-dark">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Desc</th>
+      <th scope="col">Link</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movies;index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{movie.name}}</td>
+      <td>{{movie.desc.slice(0,50)}}...</td>
+      <td>{{movie.link}}</td>
+      <td>
+        <a class="btn btn-primary" href="/details/{{movie.id}}" role="button">Details</a>
+        <button type="button" class="btn btn-danger" (click)="removeMovie(movie.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

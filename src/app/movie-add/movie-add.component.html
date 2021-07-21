@@ -1,0 +1,19 @@
+<a href="/list" class="btn btn-primary m-5">Go list</a>
+<div class="container-fluid p-5">
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="movie.name" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Desc</label>
+      <input type="text" class="form-control" id="desc" [(ngModel)]="movie.desc" name="desc">
+    </div>
+    <div class="mb-3">
+      <label for="link" class="form-label">Link</label>
+      <input type="text" class="form-control" id="link" [(ngModel)]="movie.link" name="link">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addMovie()">Add</button>
+  </form>
+</div>
+
